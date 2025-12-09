@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activate Reward</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+
+    body{
+      background:url('back2.jpg') no-repeat center center/cover;
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between;
+      color:white;
+      padding:20px;
+      text-align:center;
+    }
+
+    .container{
+      width:90%;
+      max-width:480px;
+      background:rgba(0,0,0,0.45);
+      padding:20px;
+      margin-top:30px;
+      border-radius:15px;
+      backdrop-filter:blur(6px);
+    }
+
+    .center-img{
+      width:260px;
+      height:260px;
+      border-radius:18px;
+      overflow:hidden;
+      margin:auto;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .center-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .msg{
+      margin-top:18px;
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .highlight{
+      font-size:18px;
+      font-weight:bold;
+      color:#00ffea;
+    }
+
+    .whatsapp-btn{
+      margin-top:22px;
+      background:#25D366;
+      padding:14px 28px;
+      font-size:18px;
+      color:white;
+      border:none;
+      border-radius:40px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      width:80%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .whatsapp-btn img{
+      width:28px;
+      height:28px;
+    }
+
+    footer{
+      opacity:0.8;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="center-img">
+      <img src="imgg.jpg" alt="Reward">
+    </div>
+
+    <p class="msg">
+      To activate your redeem of up to <span class="highlight">₹1000</span>,  
+      please share this offer with a minimum of <span class="highlight">5 members</span>.
+      Once completed, your reward will unlock automatically.
+    </p>
+
+    <button class="whatsapp-btn" onclick="shareOffer()">
+      <img src="imgw.jpg" alt="WhatsApp Icon">
+      Share on WhatsApp
+    </button>
+
+  </div>
+
+  <footer>© 2025 Reward System | All Rights Reserved</footer>
+
+<script>
+function shareOffer(){
+  // Replace YOUR_LINK_HERE with your share link
+  const shareText = `Hey! I just found this offer where you can get FREE redeem up to ₹1000 👀🔥 Limited time! Check this now: 👉 YOUR_LINK_HERE`;
+
+  const url = "https://wa.me/?text=" + encodeURIComponent(shareText);
+  window.location.href = url;
+}
+</script>
+
+</body>
+</html>
